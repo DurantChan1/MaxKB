@@ -57,6 +57,7 @@ MIDDLEWARE = [
     'common.middleware.chat_headers_middleware.ChatHeadersMiddleware',
     'common.middleware.cross_domain_middleware.CrossDomainMiddleware',
     'common.middleware.doc_headers_middleware.DocHeadersMiddleware',
+    'common.middleware.request_log_middleware.RequestLogMiddleware',
 
 ]
 
