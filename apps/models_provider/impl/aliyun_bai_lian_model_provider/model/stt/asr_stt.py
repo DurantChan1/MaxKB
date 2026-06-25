@@ -45,6 +45,9 @@ class AliyunBaiLianAsrSpeechToText(MaxKBBaseModel, BaseSpeechToText):
     def speech_to_text(self, audio_file):
 
         try:
+            # Reset the global base URL to avoid interference from other models (e.g. TTS)
+            if self.api_url:
+                dashscope.base_http_api_url = self.api_url
 
             base64_audio = base64.b64encode(audio_file.read()).decode("utf-8")
 
